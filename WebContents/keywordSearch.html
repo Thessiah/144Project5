@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Keyword Search | eBay</title>
+		<script type="text/javascript" src="autosuggest.js"></script>
+        <script type="text/javascript">
+            window.onload = function () {
+                var suggest = new AutoSuggestControl(document.getElementById("text"), new SuggestionProvider()); 
+            }
+        </script>
+        <link rel="stylesheet" type="text/css" href="autosuggest.css"/>
+	</head>
+
+	<body>
+		<div>
+			<a href="/eBay/index.html">Home</a>
+			<h1>Keyword Search</h1>
+		</div>
+		<div>
+			<form action="/eBay/search" method="GET">
+				Keyword Search: 
+				<input name="query" type="text" id="text" style="width:200px;"/>
+				<input name="numResultsToSkip" type="hidden" value="0"/>
+				<input name="numResultsToReturn" type="hidden" value="25"/>
+				<input type="submit" value="Search">
+			</form>
+		</div>
+	</body>
+</html>
